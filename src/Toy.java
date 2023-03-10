@@ -1,24 +1,51 @@
+import java.util.Objects;
+
 public class Toy {
 
-    private final int TOYID;
-    private final String TOYNAME;
-    private int victoryFrequency;
+    private int toyId;
+    private String toyTitle;
+    private int toyVictoryFrequency;
 
-    public Toy(int TOYID, String TOYNAME, int victoryFrequency) {
-        this.TOYID = TOYID;
-        this.TOYNAME = TOYNAME;
-        this.victoryFrequency = victoryFrequency;
+    public Toy(int toyId, String toyTitle, int toyVictoryFrequency) {
+        this.toyId = toyId;
+        this.toyTitle = toyTitle;
+        this.toyVictoryFrequency = toyVictoryFrequency;
     }
 
-    public int getTOYID() {
-        return TOYID;
+    public int getToyId() {
+        return toyId;
     }
 
-    public String getTOYNAME() {
-        return TOYNAME;
+    public void setToyId(int toyId) {
+        this.toyId = toyId;
     }
 
-    public int getVictoryFrequency() {
-        return victoryFrequency;
+    public String getToyTitle() {
+        return toyTitle;
+    }
+
+    public void setToyTitle(String toyTitle) {
+        this.toyTitle = toyTitle;
+    }
+
+    public int getToyVictoryFrequency() {
+        return toyVictoryFrequency;
+    }
+
+    public void setToyVictoryFrequency(int toyVictoryFrequency) {
+        this.toyVictoryFrequency = toyVictoryFrequency;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Toy toy = (Toy) o;
+        return toyTitle.equals(toy.toyTitle);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(toyTitle);
     }
 }
