@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d87076d6-9c1b-4502-9140-3e3ec5c2249d" name="Changes" comment="Added README file">
+    <list default="true" id="d87076d6-9c1b-4502-9140-3e3ec5c2249d" name="Changes" comment="Toy class: overrode equals() and hashCode(); added all getters and setters.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Toy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Toy.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,6 +17,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Enum" />
         <option value="Class" />
       </list>
     </option>
@@ -65,7 +68,21 @@
       <option name="project" value="LOCAL" />
       <updated>1678302973747</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Added Toy class">
+      <created>1678382514818</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1678382514819</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Toy class: overrode equals() and hashCode(); added all getters and setters.">
+      <created>1678471306203</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1678471306203</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -82,6 +99,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Git init" />
     <MESSAGE value="Added README file" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added README file" />
+    <MESSAGE value="Added Toy class" />
+    <MESSAGE value="Toy class: overrode equals() and hashCode(); added all getters and setters." />
+    <option name="LAST_COMMIT_MESSAGE" value="Toy class: overrode equals() and hashCode(); added all getters and setters." />
   </component>
 </project>

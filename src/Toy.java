@@ -1,6 +1,6 @@
 import java.util.Objects;
 
-public class Toy {
+public class Toy implements Comparable<Toy> {
 
     private int toyId;
     private String toyTitle;
@@ -16,16 +16,8 @@ public class Toy {
         return toyId;
     }
 
-    public void setToyId(int toyId) {
-        this.toyId = toyId;
-    }
-
     public String getToyTitle() {
         return toyTitle;
-    }
-
-    public void setToyTitle(String toyTitle) {
-        this.toyTitle = toyTitle;
     }
 
     public int getToyVictoryFrequency() {
@@ -34,6 +26,10 @@ public class Toy {
 
     public void setToyVictoryFrequency(int toyVictoryFrequency) {
         this.toyVictoryFrequency = toyVictoryFrequency;
+    }
+
+    public String getInfo() {
+        return String.format("ID: %d, Title: %s", toyId, toyTitle);
     }
 
     @Override
@@ -47,5 +43,10 @@ public class Toy {
     @Override
     public int hashCode() {
         return Objects.hash(toyTitle);
+    }
+
+    @Override
+    public int compareTo(Toy o) {
+        return Integer.compare(this.toyVictoryFrequency, o.toyVictoryFrequency);
     }
 }
