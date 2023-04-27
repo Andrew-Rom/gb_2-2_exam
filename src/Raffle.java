@@ -10,6 +10,14 @@ public class Raffle {
 
     private static int idCounter = 0;
 
+    /**
+     * Add a new toy in the prize fund.
+     * It is necessary to specify a title of toy which be added to list and its frequency of dropping out.
+     * The ID of new toy will be added automatically.
+     * If a toy which user want to add in the prize fund is already exist
+     * the message about invalid adding will be shown and such toy will not be added in the prize fund.
+     * In another case a new toy will be added a prize fund and the message about this will be shown.
+     */
     public void addToy() {
         Scanner scan = new Scanner(System.in);
         String title;
@@ -44,6 +52,12 @@ public class Raffle {
         }
     }
 
+    /**
+     * Change the toy dropping out of dropping out.
+     * It is necessary to specify a title of toy which dropping out dropping out be changed.
+     * If a toy frequency of victory is changed successfully the message about this will be shown.
+     * In another case the message about incorrect input will be shown.
+     */
     public void setFrequency() {
         Scanner scan = new Scanner(System.in);
         System.out.print("Enter Toy ID: ");
@@ -70,6 +84,12 @@ public class Raffle {
         }
     }
 
+    /**
+     * Input validation method.
+     * @param s - string text.
+     * @return True if all characters in the string are digits.
+     * False if at least one character is not digit.
+     */
     private static boolean isDigit(String s) throws NumberFormatException {
         try {
             Integer.parseInt(s);
@@ -79,6 +99,11 @@ public class Raffle {
         }
     }
 
+    /**
+     * The method of realization the raffle.
+     * It creates a PriorityQueue of prizes.
+     * @return prize (toy)
+     */
     public Toy getPrize() {
         if (prizes.size() == 0) {
             Random rnd = new Random();
@@ -92,6 +117,10 @@ public class Raffle {
         return prizes.poll();
     }
 
+    /**
+     * The method of initialization the raffle.
+     * It is necessary to add at least two toys into prize fund.
+     */
     public void raffle() {
         if (toys.size() >= 2) {
             Toy prize = getPrize();
@@ -102,6 +131,10 @@ public class Raffle {
         }
     }
 
+    /**
+     * The method of saving the result of raffle.
+     * It will create a new file with results of the raffle.
+     */
     private void saveResult(String text) {
         File file = new File("Result.txt");
         try {
